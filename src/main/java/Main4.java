@@ -33,6 +33,5 @@ public class Main4 {
         for (Map.Entry<String, String> e : map.entrySet()) {
             System.out.println(e.getValue());
         }
-
     }
 }

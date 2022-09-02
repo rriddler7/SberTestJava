@@ -7,7 +7,6 @@ public class Main1 {
     private static final String SQL = "SELECT COUNT(*) FROM dq_rule";
     private static final String SQL2 = "INSERT INTO log (date, count) VALUES (?, ?)";
 
-
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
         if (args.length != 3) {
             System.out.println("Incorrect number of args");
