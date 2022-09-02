@@ -72,12 +72,12 @@ public class Main5 {
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String line;
             byte[] decode = new byte[0];
-            line = br.readLine();
-            System.out.println(line);
-//            while ((line = br.readLine()) != null) {
-//                decode = Base64.getDecoder().decode(encode);
-//            }
-            decode = Base64.getDecoder().decode(line);
+//            line = br.readLine();
+//            System.out.println(line);
+            while ((line = br.readLine()) != null) {
+                decode = Base64.getDecoder().decode(encode);
+            }
+//            decode = Base64.getDecoder().decode(line);
             byte[] key1 = Arrays.copyOf(decode, 32);
             byte[] cipherText1 = Arrays.copyOfRange(decode, 32, decode.length);
 
