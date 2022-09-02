@@ -3,7 +3,6 @@ import java.time.LocalDateTime;
 
 public class Main1 {
 
-
     private static final String SQL = "SELECT COUNT(*) FROM dq_rule";
     private static final String SQL2 = "INSERT INTO log (date, count) VALUES (?, ?)";
 
@@ -35,5 +34,4 @@ public class Main1 {
             e.printStackTrace();
         }
     }
-
 }
