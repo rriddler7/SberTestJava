@@ -9,9 +9,6 @@ create table if not exists dq_rule
 
 create table if not exists log
 (
-    id    serial
-        constraint log_pk
-            primary key,
     date  timestamp,
     count numeric
 );

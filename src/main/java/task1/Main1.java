@@ -1,3 +1,5 @@
+package task1;
+
 import java.sql.*;
 import java.time.LocalDateTime;
 
@@ -8,7 +10,7 @@ public class Main1 {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
         if (args.length != 3) {
-            System.out.println("Incorrect number of args");
+            System.out.println("Incorrect number of arguments");
             return;
         }
 
@@ -17,7 +19,7 @@ public class Main1 {
         String url = args[2];
 
         Class.forName("org.postgresql.Driver");
-        try(
+        try (
                 Connection connection = DriverManager.getConnection(url, login, password);
                 PreparedStatement preparedStatement = connection.prepareStatement(SQL);
                 PreparedStatement preparedStatement2 = connection.prepareStatement(SQL2);
@@ -30,6 +32,9 @@ public class Main1 {
             preparedStatement2.setTimestamp(1, Timestamp.valueOf(LocalDateTime.now()));
             preparedStatement2.setLong(2, count);
             preparedStatement2.execute();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+
         } catch (Exception e) {
             e.printStackTrace();
         }

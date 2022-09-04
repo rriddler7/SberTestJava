@@ -1,16 +1,14 @@
-package task2;
+package task2_3;
 
 public class Daughter extends Parent{
 
     @Override
-    public int getFactorial(int n) {
+    public long getFactorial(long n) {
         n = 10;
-        int result = 1;
+        long result = 1;
         for (int i = 1; i <= n; i++) {
             result *= i;
         }
         return result;
-//        return 3628800;
     }
-
 }
